@@ -6,7 +6,7 @@ This project demonstrates a Next.js externals issue when using the `serverExtern
 
 We want to exclude `@apm-js-collab/tracing-hooks` from the server bundle.
 
-Adding it to the `serverExternalPackages` config option works with yarn, but not with pnpm or npm.
+Adding it to the `serverExternalPackages` config option works with npm/yarn, but not with pnpm.
 
 It could be an issue of how package managers link the dependencies. It seems to work with direct dependencies, but not with indirect dependencies.
 
