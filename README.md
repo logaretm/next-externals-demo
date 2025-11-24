@@ -21,6 +21,25 @@ Meanwhile `@apm-js-collab/tracing-hooks` is several layers deep in the dependenc
     └── @apm-js-collab/tracing-hooks 0.3.1
 ```
 
+## Running the project
+
+Install the dependencies using either `pnpm` or `yarn` then build the app with `pnpm/yarn build:webpack`.
+
+Depending on which package manager you use, the bundle analyzer will show different results.
+
+### pnpm
+
+<img src="pnpm.png" alt="pnpm bundle analyzer results" />
+
+### yarn
+
+<img src="yarn.png" alt="yarn bundle analyzer results" />
+
 ## Workaround
 
 Adding it to the webpack config via the `webpack` config option works with all package managers.
+
+Also setting either of the following in the `.npmrc` file makes externalizing libraries work with `pnpm`:
+
+- `shamefully-hoist=true`
+- `node-linker=hoisted`
